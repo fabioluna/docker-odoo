@@ -1,6 +1,6 @@
 FROM trustcode/docker-odoo:v11
 
-ADD bin/entrypoint-nds.sh /opt/odoo
+ADD bin/entrypoint.sh /opt/odoo
 
 RUN chmod +x /opt/odoo/entrypoint.sh
 
