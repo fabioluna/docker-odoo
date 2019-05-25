@@ -1,0 +1,20 @@
+version: '3'
+services:
+  odoo-update:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: trustcode/docker-odoo:11.0
+    network_mode: host
+    # command: autoupdate
+    volumes:
+      - ~/.ssh:/home/temp/.ssh
+    environment:
+      PG_USER: novo
+      PG_PASSWORD: 123
+      ODOO_VERSION: 11.0
+      ODOO_ENTERPRISE: 0
+      PORT: 8090
+      TRUSTCODE_ENTERPRISE: 0
+      DATABASE: curso_odoo
+      DISABLE_LOGFILE: 1
