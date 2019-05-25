@@ -1,5 +1,6 @@
 FROM trustcode/docker-odoo:v11
 
+ADD bin/autoupdate /opt/odoo
 ADD bin/entrypoint-nds.sh /opt/odoo
 
 RUN chown odoo:odoo /opt/odoo/autoupdate && \
