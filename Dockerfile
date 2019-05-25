@@ -7,3 +7,4 @@ ADD bin/entrypoint-nds.sh /opt/odoo
 # RUN chmod +x /opt/odoo/entrypoint-nds.sh
 
 ENTRYPOINT ["/opt/odoo/entrypoint-nds.sh"]
+CMD ["/usr/bin/supervisord"]
